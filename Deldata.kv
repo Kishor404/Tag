@@ -1,0 +1,115 @@
+MDScreen:
+	name:"Deldata"
+	md_bg_color:app.milk
+	
+	MDFloatLayout:
+		
+	
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.9}
+			
+			
+			Button:
+				text:" "
+				size_hint:.75,.7
+				pos_hint:{"center_x":.5,"center_y":.3}
+				background_color:1,0,0,0
+				on_release:
+					root.manager.transition.direction="right"
+					root.manager.current="Settings"
+					
+			Image:
+				source:"homeui2.jpg"
+				size_hint: 3, 2
+				pos_hint:{"center_x":.5,"center_y":.5}
+				
+			MDLabel:
+				text:"Delete Chat Data"
+				pos_hint:{"center_y":.3}
+				halign:"center"
+				font_name:"Poppins"
+				font_size:"25sp"
+				theme_text_color:"Custom"
+				text_color:53/255,56/255,60/255,1
+				
+			
+				
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.5}
+					
+			MDFloatLayout:
+				size_hint:.7,.6
+				pos_hint:{"center_x":.5,"center_y":.5}
+					
+				MDFloatLayout:
+					size_hint:1,1
+					pos_hint:{"center_x":.505,"center_y":-.9}
+					canvas:
+						Color:
+							rgb:(app.them)
+						RoundedRectangle:
+							size:self.size
+							pos:self.pos
+							radius:[22,22,22,22]
+					
+					
+				Button:
+					text:" "
+					size_hint:1,1
+					pos_hint:{"center_x":.505,"center_y":-.9}
+					background_color:1,0,0,0
+					on_release:
+						app.deldatacon()
+						
+				MDLabel:
+					text:"Delete All Data !"
+					halign:"center"
+					pos_hint:{"center_x":.5,"center_y":-.9}
+					font_name:"Poppins"
+					font_size:"18sp"
+					color:1,1,1,1
+					
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.65}
+					
+			MDFloatLayout:
+				size_hint:.7,.6
+				pos_hint:{"center_x":.5,"center_y":.5}
+					
+				MDFloatLayout:
+					size_hint:1,1
+					pos_hint:{"center_x":.505,"center_y":-.9}
+					canvas:
+						Color:
+							rgb:(app.them)
+						RoundedRectangle:
+							size:self.size
+							pos:self.pos
+							radius:[22,22,22,22]
+					
+						
+				Button:
+					text:" "
+					size_hint:1,1
+					pos_hint:{"center_x":.505,"center_y":-.8}
+					background_color:1,0,0,0
+					on_release:
+						app.unlock()
+						
+				MDLabel:
+					text:"Unlock The Button"
+					halign:"center"
+					pos_hint:{"center_x":.5,"center_y":-.9}
+					font_name:"Poppins"
+					font_size:"18sp"
+					color:1,1,1,1
+					
+				
+					
+			

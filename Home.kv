@@ -1,0 +1,101 @@
+MDScreen:
+	name:"Home"
+	
+	MDFloatLayout:
+		md_bg_color: app.milk
+		
+
+		Button:
+			#chart
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.305,"center_y":.664}
+			background_color:1,0,0,0
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Chatbot"
+				
+		Button:
+			#?
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.715,"center_y":.664}
+			background_color:1,0,0,0
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Question"
+				
+		Button:
+			#!
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.305,"center_y":.465}
+			background_color:1,0,0,0
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Info"
+				
+		Button:
+			#console
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.715,"center_y":.465}
+			background_color:1,0,0,0
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Settings"
+		
+		
+		Image:
+			source:"homeui2.jpg"
+			size_hint: 1, .5
+			pos_hint:{"center_x":.5,"center_y":.9}
+				
+		Image:
+			source:"homeui1.jpg"
+			size_hint: 1, .5
+			pos_hint:{"center_x":.5,"center_y":.55}
+			
+		MDLabel:
+			text:app.Name
+			halign:"center"
+			pos_hint:{"center_y":.88}
+			font_name:"Poppins"
+			font_size:"24sp"
+			color:0,0,0,1
+			
+			
+			
+
+			
+		MDFloatLayout:
+			
+			Button:
+				text:" "
+				size_hint:.7,.1
+				pos_hint:{"center_x":.5,"center_y":.23}
+				background_color:1,0,0,1
+				on_release:
+					root.manager.transition.direction="left"
+					root.manager.current="Coffee"
+					
+			Image:
+				source:"homeui2.jpg"
+				size_hint: 1, .5
+				pos_hint:{"center_x":.5,"center_y":.25}
+			
+			MDLabel:
+				text:"Support Us"
+				halign:"center"
+				pos_hint:{"center_y":.228}
+				font_name:"Poppins"
+				font_size:"24sp"
+				color:0,0,0,1
+		
+			
+		
+				
+				
+			
+			
+			

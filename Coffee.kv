@@ -1,0 +1,52 @@
+MDScreen:
+	name:"Coffee"
+	md_bg_color:app.milk
+	
+	MDFloatLayout:
+	
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.9}
+			
+			Button:
+				text:" "
+				size_hint:.75,.7
+				pos_hint:{"center_x":.5,"center_y":.3}
+				background_color:1,0,0,0
+				on_release:
+				#	app.change_color(1)
+					root.manager.transition.direction="right"
+					root.manager.current="Home"
+					
+			Image:
+				source:"homeui2.jpg"
+				size_hint: 3, 2
+				pos_hint:{"center_x":.5,"center_y":.5}
+				
+			
+			
+			
+		
+			MDLabel:
+				id:bot_name
+				text:"Support Us"
+				pos_hint:{"center_y":.3}
+				halign:"center"
+				font_name:"Poppins"
+				font_size:"25sp"
+				theme_text_color:"Custom"
+				text_color:53/255,56/255,60/255,1
+			
+		Image:
+			source:"coffeeui.jpg"
+			pos_hint:{"center_y":.45}
+			
+		Button:
+			text:" "
+			size_hint:.75,.7
+			pos_hint:{"center_x":.5,"center_y":.45}
+			background_color:1,0,0,0
+			on_release:
+				#	app.change_color(1)
+				app.coffee()

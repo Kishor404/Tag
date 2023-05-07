@@ -1,0 +1,147 @@
+MDScreen:
+	name:"Lang"
+	md_bg_color:app.milk
+	text_input:text_input
+	
+	MDFloatLayout:
+	
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.9}
+			
+			Button:
+				text:" "
+				size_hint:.75,.7
+				pos_hint:{"center_x":.5,"center_y":.3}
+				background_color:1,0,0,0
+				on_release:
+					root.manager.transition.direction="right"
+					root.manager.current="Settings"
+			
+			Image:
+				source:"homeui2.jpg"
+				size_hint: 3, 2
+				pos_hint:{"center_x":.5,"center_y":.5}
+				
+			MDLabel:
+				id:bot_name
+				text:"Language"
+				pos_hint:{"center_y":.3}
+				halign:"center"
+				font_name:"Poppins"
+				font_size:"25sp"
+				theme_text_color:"Custom"
+				text_color:53/255,56/255,60/255,1
+				
+	MDFloatLayout:
+		pos_hint:{"center_y":.6}
+		size_hint_y:.11
+		MDFloatLayout:
+			pos_hint:{"center_y":.5}
+			size_hint:.7,.6
+			MDFloatLayout:
+				size_hint:1,1
+				pos_hint:{"center_x":.72,"center_y":.5}
+				canvas:
+					Color:
+						rgb:(app.black)
+					RoundedRectangle:
+						size:self.size
+						pos:self.pos
+						radius:[22,22,22,22]
+					
+						
+				Button:
+					#see code
+					text:" "
+					size_hint:1,1
+					pos_hint:{"center_x":.5,"center_y":.5}
+					background_color:1,0,0,0
+					on_release:
+						app.lang_code()
+				
+				MDLabel:
+					text:"Click This Button For See The Language Codes..."
+					halign:"center"
+					pos_hint:{"center_x":.5,"center_y":2.5}
+					font_name:"Poppins"
+					font_size:"18sp"
+					color:app.black
+					
+				MDLabel:
+					text:"You Need To Delete Data In Settings After This Update.\n\nThe Updated Language Is In Form Of English Only..."
+					halign:"center"
+					pos_hint:{"center_x":.5,"center_y":-5.5}
+					font_name:"Poppins"
+					font_size:"18sp"
+					color:0,0,0,1
+						
+				MDLabel:
+					text:"Language Codes"
+					halign:"center"
+					pos_hint:{"center_x":.5,"center_y":.45}
+					font_name:"Poppins"
+					font_size:"18sp"
+					color:1,1,1,1
+				
+	MDFloatLayout:
+		pos_hint:{"center_y":.45}
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.5}
+					
+			MDFloatLayout:
+				size_hint:.7,.6
+				pos_hint:{"center_x":.5,"center_y":.5}
+				canvas:
+					Color:
+						rgb:(app.white)
+					RoundedRectangle:
+						size:self.size
+						pos:self.pos
+						radius:[23,23,23,23]
+						
+				
+				TextInput:
+					id:text_input
+					hint_text:"Enter The Language Code..."
+					size_hint:1,None
+					pos_hint:{"center_x":.5,"center_y":.5}
+					font_size:"18sp"
+					height:self.minimum_height
+					cursor_color:app.black
+					cursor_width:"2sp"
+					foreground_color:app.black
+					background_color:0,0,0,0
+					padding:15
+					font_name:"Poppins"
+					
+				MDFloatLayout:
+					size_hint:1,1
+					pos_hint:{"center_x":.505,"center_y":-.9}
+					canvas:
+						Color:
+							rgb:(app.them)
+						RoundedRectangle:
+							size:self.size
+							pos:self.pos
+							radius:[22,22,22,22]
+					
+						
+				Button:
+					text:" "
+					size_hint:1,1
+					pos_hint:{"center_x":.505,"center_y":-.9}
+					background_color:1,0,0,0
+					on_release:
+						app.change_lang()
+						
+				MDLabel:
+					text:"Update !"
+					halign:"center"
+					pos_hint:{"center_x":.5,"center_y":-.9}
+					font_name:"Poppins"
+					font_size:"18sp"
+					color:1,1,1,1

@@ -1,0 +1,141 @@
+MDScreen:
+	name:"Settings"
+	md_bg_color:app.milk
+	
+	MDFloatLayout:
+	
+		MDFloatLayout:
+			md_bg_color:app.milk
+			size_hint_y:.11
+			pos_hint:{"center_y":.9}
+			
+			Button:
+				text:" "
+				size_hint:.75,.7
+				pos_hint:{"center_x":.5,"center_y":.3}
+				background_color:1,0,0,0
+				on_release:
+					root.manager.transition.direction="right"
+					root.manager.current="Home"
+			
+			Image:
+				source:"homeui2.jpg"
+				size_hint: 3, 2
+				pos_hint:{"center_x":.5,"center_y":.5}
+				
+			MDLabel:
+				id:bot_name
+				text:"Settings"
+				pos_hint:{"center_y":.3}
+				halign:"center"
+				font_name:"Poppins"
+				font_size:"25sp"
+				theme_text_color:"Custom"
+				text_color:53/255,56/255,60/255,1
+				
+			
+			Image:
+				source:"colorui.jpg"
+				size_hint: 3, 2
+				pos_hint:{"center_x":.5,"center_y":-5.5}
+				
+        Button:
+        	#red
+			size_hint:.075,.04
+    	    pos_hint:{"center_x":.22,"center_y":.215}
+    	    text: ''
+    	    background_color:1,0,0,0
+            on_release:
+				app.change_color(1)
+            
+		Button:
+			#black
+			size_hint:.075,.04
+    	    pos_hint:{"center_x":.365,"center_y":.215}
+    	    text: ''
+    	    background_color:1,0,0,0
+            on_release:
+				app.change_color(2)
+            
+        Button:
+        	#green
+			size_hint:.075,.04
+    	    pos_hint:{"center_x":.5,"center_y":.215}
+    	    text: ''
+    	    background_color:1,0,0,0
+            on_release:
+				app.change_color(3)
+            
+        Button:
+        	#yellow
+			size_hint:.075,.04
+    	    pos_hint:{"center_x":.64,"center_y":.215}
+    	    text: ''
+    	    background_color:1,0,0,0
+            on_release:
+				app.change_color(4)
+		
+		Button:
+        	#blue
+			size_hint:.075,.04
+    	    pos_hint:{"center_x":.78,"center_y":.215}
+    	    text: ''
+    	    background_color:1,0,0,0
+            on_release:
+				app.change_color(5)
+            
+
+            		###########
+            		
+        
+			
+        Button:
+        	#Bot
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.285,"center_y":.665}
+			background_color:1,0,0,1
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="BotID"
+					
+					
+		Button:
+			#lang
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.735,"center_y":.665}
+			background_color:1,0,0,1
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Lang"
+				
+		Button:
+			#edit
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.285,"center_y":.445}
+			background_color:1,0,0,1
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Editdata"
+					
+					
+		Button:
+			#del
+			text:" "
+			size_hint:.2,.1
+			pos_hint:{"center_x":.735,"center_y":.445}
+			background_color:1,0,0,1
+			on_release:
+				root.manager.transition.direction="left"
+				root.manager.current="Deldata"
+				
+		Image:
+			source:"settingsui1.jpg"
+			size_hint: 1.1,1
+			pos_hint:{"center_x":.5,"center_y":.55}
+            
+
+        
+		
